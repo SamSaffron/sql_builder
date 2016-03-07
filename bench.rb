@@ -20,15 +20,6 @@ DB << "DROP TABLE cars" rescue nil
 DB << "CREATE TABLE cars(id serial primary key, make varchar, color varchar, max_speed int)"
 DB << "CREATE INDEX idx_color ON cars (color, max_speed)"
 
-DB << "DROP TABLE topics" rescue nil
-DB << "DROP TABLE posts" rescue nil
-DB << "DROP TABLE users" rescue nil
-DB << "DROP TABLE categories" rescue nil
-
-DB << "CREATE TABLE topics(id serial primary key, user_id int, title varchar, created_at timestamp without time zone, updated_at timestamp without time zone"
-
-DB << "CREATE TABLE posts(id serial primary key, topic_id int, body varchar, created_at timestamp, updated_at timestamp without time zone)"
-
 class Car < ActiveRecord::Base
 end
 
