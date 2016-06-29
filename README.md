@@ -1,5 +1,3 @@
 # sql_builder
 
-minimal object mapper for
-ruby  
-ruby
+minimal object mapper for ruby
